@@ -5,7 +5,7 @@ class Company < ActiveRecord::Base
 
 	# Forgot how to test this method(what arguments to pass in test)
 	def give_freebie(dev, item_name, value)
-		self.freebies.create(devs: dev.id, item_name: item_name, value: value, company_id: id)
+		self.freebies.create(dev_id: dev.id, item_name: item_name, value: value, company_id: id)
 	end
 
 	def self.oldest_company
