@@ -2,8 +2,6 @@ class Company < ActiveRecord::Base
 	has_many :freebies
 	has_many :devs, through: :freebies
 
-
-	# Forgot how to test this method(what arguments to pass in test)
 	def give_freebie(dev, item_name, value)
 		self.freebies.create(dev_id: dev.id, item_name: item_name, value: value, company_id: id)
 	end

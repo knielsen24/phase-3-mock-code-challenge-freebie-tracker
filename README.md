@@ -154,7 +154,7 @@ companies for the first dev in the database based on your seed data; and
 #### Company
 
 - `Company#give_freebie(dev, item_name, value)`
-  - takes a `dev` (an instance of the `Dev` class), an `item_name` (string), and a `value`
+ [x] - takes a `dev` (an instance of the `Dev` class), an `item_name` (string), and a `value`
     as arguments, and creates a new `Freebie` instance associated with this
     company and the given dev
 - `Company.oldest_company`
