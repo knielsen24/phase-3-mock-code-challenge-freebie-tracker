@@ -7,7 +7,7 @@ class Company < ActiveRecord::Base
 	end
 
 	def self.oldest_company
-		self.pluck(:founding_year).sort.last
+		self.pluck(:founding_year).sort.first
 	end
 
 end
