@@ -1,3 +1,13 @@
 class Dev < ActiveRecord::Base
+	has_many :freebies
+	has_many :companies, through: :freebies
 
+	# includes method
+	def received_one?(item_name)
+		freebies.exists?(item_name: item_name)
+	end
+
+	def give_away(dev, freebie)
+		
+	end
 end

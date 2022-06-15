@@ -99,8 +99,8 @@ migration for the `freebies` table.
   In your migration, create any columns your `freebies` table will need to
   establish these relationships using the right foreign keys.
 - The `freebies` table should also have:
-  - An `item_name` column that stores a string.
-  - A `value` column that stores an integer.
+  [x] - An `item_name` column that stores a string.
+  [x] - A `value` column that stores an integer.
 
 After creating the `freebies` table using a migration, use the `seeds.rb` file to
 create instances of your `Freebie` class so you can test your code.
@@ -119,23 +119,23 @@ is "freebie".
 #### Freebie
 
 - `Freebie#dev`
-  - returns the `Dev` instance for this Freebie
+  [x] - returns the `Dev` instance for this Freebie
 - `Freebie#company`
-  - returns the `Company` instance for this Freebie
+  [x] - returns the `Company` instance for this Freebie
 
 #### Company
 
 - `Company#freebies`
-  - returns a collection of all the freebies for the Company
+  [x] - returns a collection of all the freebies for the Company
 - `Company#devs`
-  - returns a collection of all the devs who collected freebies from the Company
+  [x] - returns a collection of all the devs who collected freebies from the Company
 
 #### Dev
 
 - `Dev#freebies`
-  - returns a collection of all the freebies that the Dev has collected
+  [x] - returns a collection of all the freebies that the Dev has collected
 - `Dev#companies`
-  - returns a collection of all the companies that the Dev has collected
+  [x] - returns a collection of all the companies that the Dev has collected
     freebies from
 
 Use `rake console` and check that these methods work before proceeding. For
@@ -148,7 +148,7 @@ companies for the first dev in the database based on your seed data; and
 #### Freebie
 
 - `Freebie#print_details`
-  - should return a string formatted as follows:
+ [x] - should return a string formatted as follows:
     `{insert dev's name} owns a {insert freebie's item_name} from {insert company's name}`
 
 #### Company
@@ -158,12 +158,12 @@ companies for the first dev in the database based on your seed data; and
     as arguments, and creates a new `Freebie` instance associated with this
     company and the given dev
 - `Company.oldest_company`
-  - returns the `Company` instance with the earliest founding year
+  [x] - returns the `Company` instance with the earliest founding year
 
 #### Dev
 
 - `Dev#received_one?(item_name)`
-  - accepts an `item_name` (string) and returns true if any of the freebies
+  [x] - accepts an `item_name` (string) and returns true if any of the freebies
     associated with the dev has that `item_name`, otherwise returns false
 - `Dev#give_away(dev, freebie)`
   - accepts a `Dev` instance and a `Freebie` instance, changes the freebie's dev
